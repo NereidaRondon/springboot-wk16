@@ -21,11 +21,15 @@ public class BaseTest {
   @Getter  
   private TestRestTemplate restTemplate;
   
-  //retrieve URI
-  protected String getBaseUri() {
+  //retrieve URI for jeeps
+  protected String getBaseUriForJeeps() {
     //will fill in %d as serverPort #
     return String.format("http://localhost:%d/jeeps", serverPort);
   }
   
-  
+  //retrieve URI for orders
+  protected String getBaseUriForOrders() {
+    //will fill in %d as serverPort #
+    return String.format("http://localhost:%d/orders", serverPort);
+  }
 }
